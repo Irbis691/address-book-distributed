@@ -2,10 +2,10 @@ applications:
   - name: address-book-history
     path: ./applications/history-server/build/libs/history-server.jar
     routes:
-      - route: history-address-book-[UNIQUE_SUFFIX].[CF_DOMAIN]
+      - route: history-address-book-ipazynych.cfapps.io
     memory: 1G
     instances: 1
     env:
-      REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
+      REGISTRATION_SERVER_ENDPOINT: http://history-address-book-ipazynych.cfapps.io
     services:
       - address-book-history-database

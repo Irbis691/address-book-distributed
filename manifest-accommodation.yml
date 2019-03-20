@@ -2,10 +2,10 @@ applications:
   - name: address-book-accommodation
     path: ./applications/accommodation-server/build/libs/accommodation-server.jar
     routes:
-      - route: accommodation-address-book-[UNIQUE_SUFFIX].[CF_DOMAIN]
+      - route: accommodation-address-book-ipazynych.cfapps.io
     memory: 1G
     instances: 1
     env:
-      REGISTRATION_SERVER_ENDPOINT: http://FILL_ME_IN
+      REGISTRATION_SERVER_ENDPOINT: http://accommodation-address-book-ipazynych.cfapps.io
     services:
       - address-book-accommodation-database
