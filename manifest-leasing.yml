@@ -6,6 +6,6 @@ applications:
     memory: 1G
     instances: 1
     env:
-      REGISTRATION_SERVER_ENDPOINT: http://leasing-address-book-ipazynych.cfapps.io
+      REGISTRATION_SERVER_ENDPOINT: http://registration-address-book-ipazynych.cfapps.io
     services:
       - address-book-leasing-database
