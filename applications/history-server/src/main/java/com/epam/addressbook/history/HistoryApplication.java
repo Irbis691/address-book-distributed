@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -15,6 +16,7 @@ import java.util.TimeZone;
         SecurityAutoConfiguration.class
 })
 @EnableEurekaClient
+@EnableCircuitBreaker
 @ComponentScan({"com.epam.addressbook.history", "com.epam.addressbook.restsupport"})
 public class HistoryApplication {
     public static void main(String[] args) {

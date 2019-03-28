@@ -9,3 +9,4 @@ applications:
     services:
       - address-book-history-database
       - address-book-service-registry
+      - address-book-breaker-dashboard
