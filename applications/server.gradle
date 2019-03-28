@@ -1,4 +1,11 @@
 apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
+
+dependencyManagement {
+    imports {
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$springCloudServicesClientLibrariesVersion"
+    }
+}
 
 dependencies {
     compile project(":components:rest-support")
@@ -7,6 +14,10 @@ dependencies {
 
     compile "com.zaxxer:HikariCP:$hikariCPVersion"
     compile "mysql:mysql-connector-java:$mysqlConnectorJavaVersion"
+
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVersion"
+
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
 
     testCompile project(":components:test-support")
 }
