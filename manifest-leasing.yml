@@ -10,3 +10,4 @@ applications:
       - address-book-leasing-database
       - address-book-service-registry
       - address-book-circuit-breaker-dashboard
+      - address-book-config-server

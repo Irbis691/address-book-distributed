@@ -19,5 +19,20 @@ dependencies {
 
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
 
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-config-client"
+
     testCompile project(":components:test-support")
 }
+
+bootRun.environment([
+        "APPLICATION_OAUTH_ENABLED": true,
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_ID": "address-book",
+        "SECURITY_OAUTH2_CLIENT_CLIENT_SECRET": "abpassword",
+        "SECURITY_USER_NAME": "actuator",
+        "SECURITY_USER_PASSWORD": "actpass"
+])
+
+test.environment([
+        "REGISTRATION_SERVER_ENDPOINT": "http://registration-server"
+])

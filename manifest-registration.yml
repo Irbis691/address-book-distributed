@@ -9,3 +9,4 @@ applications:
     services:
       - address-book-registration-database
       - address-book-service-registry
+      - address-book-config-server
