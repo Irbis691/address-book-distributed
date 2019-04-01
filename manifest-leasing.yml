@@ -9,4 +9,4 @@ applications:
     services:
       - address-book-leasing-database
       - address-book-service-registry
-      - address-book-breaker-dashboard
+      - address-book-circuit-breaker-dashboard
